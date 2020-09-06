@@ -27,6 +27,7 @@ namespace Demo.BookStore
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseStaticFiles();
 
             //app.Use(async (context, next) =>
             //{
