@@ -20,9 +20,11 @@ namespace Demo.BookStore.Controllers
             var data= _bookRespository.GetAllBooks().ToList();
             return View(data);
         }
-        public BookModel GetBook(int id)
+        public ViewResult GetBook(int id)
         {
-            return _bookRespository.GetBookById(id);
+            var data= _bookRespository.GetBookById(id);
+
+            return View(data);
         }
         public List<BookModel> searchBooks(string bookName,string autherName)
         {
